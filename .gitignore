@@ -4,7 +4,6 @@
 /.classpath
 /.factorypath
 /.idea
-.mvn
 /.project
 /.settings
 /nb*
@@ -58,7 +57,7 @@ gen
 *.iml
 out
 gen
-src/main/java/demo/
+src/test/java/demo/
 ### Example user template template
 ### Example user template
 
