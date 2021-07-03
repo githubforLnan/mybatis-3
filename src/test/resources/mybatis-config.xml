@@ -37,7 +37,13 @@
             </dataSource>
         </environment>
     </environments>
+     <!--基于xml 方式配置-->
+    <!--<mappers>-->
+        <!--<mapper resource="mybatis/UserMapper.xml"/>-->
+    <!--</mappers>-->
+
+    <!--基于class 方式配置-->
     <mappers>
-        <mapper resource="mybatis/UserMapper.xml"/>
+        <mapper class="demo.UserMapper"/>
     </mappers>
 </configuration>

@@ -35,8 +35,18 @@ public class Main{
     SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
     SqlSession sqlSession = sqlSessionFactory.openSession();
     try {
-      User user = sqlSession.selectOne("demo.UserDao.selectUser", 2);
-      System.out.println(user);
+      // 基于xml文件方式获取sql
+//      User user = sqlSession.selectOne("demo.UserDao.selectUser", 2);
+//      System.out.println(user);
+////      sqlSession.commit();
+//      User user1 = sqlSession.selectOne("demo.UserDao.selectUser", 2);
+//      System.out.println(user1);
+
+      // 基于annotation方式获取sql
+      UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+      User user2 = userMapper.selectUser(2);
+      System.out.println(user2);
+
     } finally {
     sqlSession.close();
     }
